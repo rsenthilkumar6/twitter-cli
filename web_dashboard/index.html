@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Twitter Offline Dashboard</title>
+  <link rel="stylesheet" href="static/css/styles.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Twitter Offline Dashboard</h1>
+    <div id="error" class="error" style="display:none"></div>
+    <div id="controls">
+      <input id="search" placeholder="Search text or username..." />
+      <select id="perPage">
+        <option value="10">10</option>
+        <option value="20" selected>20</option>
+        <option value="50">50</option>
+      </select>
+    </div>
+    <div id="tweets"></div>
+    <div id="pager" class="pager"></div>
+  </div>
+  <script src="static/js/app.js"></script>
+</body>
+</html>
