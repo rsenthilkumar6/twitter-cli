@@ -1,14 +1,29 @@
-Twitter Offline Dashboard
+# TwitArchive Dashboard
 
-To run:
+Offline dashboard for browsing archived Twitter/X feed data, styled to replicate the X client UI.
 
-1) Ensure you have data in data/feeds/index.jsonl and media/ directory populated by the aggregator.
-2) From the repo root run:
+## Features
 
-   ./scripts/run_dashboard.sh
+- X-style dark theme with Tailwind CSS
+- Three-column layout (sidebar, feed, stats panel)
+- Profile images from Twitter CDN
+- Media thumbnails (photos, videos)
+- Search filtering across tweets
+- Pagination (20 per page)
+- Archive stats and trending hashtags
 
-3) Open http://localhost:8000/web_dashboard/ in your browser.
+## Usage
 
-Notes:
-- The dashboard is a single-page app using vanilla JS. It fetches ../data/feeds/index.jsonl relative to the web_dashboard/ directory — ensure you serve the repo root (scripts/run_dashboard.sh does this).
-- If index.jsonl is missing, the page shows an error message.
+```bash
+# From the repository root:
+./scripts/run_dashboard.sh
+```
+
+Then open http://localhost:8000/web_dashboard/
+
+## Manual alternative
+
+```bash
+python3 -m http.server 8000
+open http://localhost:8000/web_dashboard/
+```
